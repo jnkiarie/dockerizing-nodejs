@@ -6,6 +6,7 @@ WORKDIR /opt/app
 RUN adduser -S app
 COPY addressbook/ .
 RUN npm install
+RUN npm install pm2
 RUN chown -R app /opt/app
 USER app
 EXPOSE 3000
